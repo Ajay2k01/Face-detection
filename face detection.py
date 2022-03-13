@@ -9,7 +9,7 @@ gray=cv.cvtColor(resized_img,cv.COLOR_BGR2GRAY)
 
 classifier= cv.CascadeClassifier("haar_face.xml")
 
-rect=classifier.detectMultiScale(gray, scaleFactor=1.2, minNeighbors=5)
+rect=classifier.detectMultiScale(gray, scaleFactor=1.2, minNeighbors=3)
 print("No of faces=",len(rect))
 
 for (x,y,w,h) in rect:
